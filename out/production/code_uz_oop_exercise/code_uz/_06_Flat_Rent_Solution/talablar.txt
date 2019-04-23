@@ -1,0 +1,58 @@
+/************       Ijara maydoni     ***********/
+     Kvartira ijara haqini boshqarish uchun  java dastur yozing.
+
+  T1-> Kvartira (Flat):
+       Tizim Manager klassi orqali ishlaydi.
+
+       Yangi kvartira newFlat() metodi orqali kiritiladi. Metod kvartirani kodini va maydoni (kvadrat metrda) qabul qiladi.
+       Metod Flat o'byektini return qiladi.
+
+       Flat klassdagi getCode() va getDimention() metodlari bor kavartirani kodini va maydonini olish uchun ishlatiladi.
+
+       Bundan tashqari past,o'rta, va yuqori mavsum uchun tariflarni o'rnatish(for set ) uchun setTariffs() metodi ishlatiladi.
+       Metod  sonlar massivini qabul qiladii,
+       va getTariffs() metodi orqali tariflarni olish mumkin.
+
+  T2-> Mijozlar (Clients):
+       newClient() medoti orqali tizimga mijozlarni kiritish mumkin.
+       Metod mijozning ismi,familiyasi va idsini qabul qiladi.
+       Metod Client ob'yektini return qiladi.
+
+       getClient() metodida mijozning id si orqali tegishli Client ob'yektini olish mumkin.
+
+       getClients() metodi tizimda mavjut bo'lgan barcha mijoslar ro'yhatini return qiladi.
+
+       Client klassdagi getName(), getSurname() va getID() metodlari orqali mijozning malumotlarini olish mumkin.
+
+  T3-> Buyurtma berish (Bookings):
+       Kvartira buyurtma berish uchun bookFlat() metodi ishlatiladi.
+       Metod quyidagi parametrlarni qabul qiladi.
+       code - kvartiraning kodi,
+       ID - mijozning idisi,
+       day - kelish kuni,
+       month - kelish oyi,
+       year - kelish yili,
+       week - necha haftaligi.
+
+       Metod Booking o'byektini return qiladi.Metod mijoz va kvartira bor deb taxmin qiladi.
+       Buyurtma tarifi quyidagi ro'yhat bo'yicha tayinlanadi.
+
+       Tarif      |  Vaqt orolig'i (Davr)
+        yuqori    |   1-31 Avgust, 20 dekabr - 6 yanvar
+        o'rta     |   1 - 31 iyul
+        past      |   yilning qolgan qismida
+
+       Kelish davri turli mavsumlarni qamrab olsa ham buyurtma uchun tarifni kelish kuniga qarab olish kerak.
+       Oddiylik uchun, faqat bir yil, 2015 yilni boshqaring.
+
+       Booking klassdagi  getClient() va getFlat()  metodlar orqali tegishli o'byeqtni olish mumkin.
+
+       getPrice() metodi orqali buyurtma bahosini olish mumkin.
+
+  T4-> Mavjudligi:
+       Ma'lum bir kvartira uchun uning yillik mavjudligini bilish mumkin.
+       getAvailability() metodi qaysi haftalar bandligi bilish uchun 52 ta elementdan tashkil topgan massive jo'natadi.
+
+       getOccupancy() metodi orqali malum bir kvartiraning bandlik darajasini bilish mumkin. (ro'yxatga olingan haftalar soni / 52).
+
+       getWeeksNumber() metodida berilgan Client ob'yeqti orqali mijoz buyurtma qilgan haftalar sonini bilish mumkin.

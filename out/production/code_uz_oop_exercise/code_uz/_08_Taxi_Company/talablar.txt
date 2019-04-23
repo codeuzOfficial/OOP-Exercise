@@ -1,0 +1,67 @@
+ ************************      Taksi kompaniyasi     ***************
+        Taksi kompaniyasini boshqarish uchun dasturni ishlab chiqish.
+
+   T1-> Kompaniya va taksi:
+        Taksi kompaniyasi TaxiCompany klassi tomonidan boshqariladi.
+
+        Taksilar Taxi klassi  tomonidan tagdim etiladi.
+        Taksi klass konstruktori  yogona bo'lgan idini qabul qiladi.
+
+        Taxi classning toString()  metod taksining malumoniti return qiladi.
+
+        TaxiCompany  classda  addTaxi() metodi taksi kompaniya ro'yhatiga  yangi taksini qo'shish uchun ishlatiladi.
+        Agar id oldindan kiritilgan bo'lsa InvalidTaxiName istisnosini tashlanadi.
+
+        Kompaniyaga taksi qo'shilsa, u mavjud taksilar navbatining oxiriga qo'shiladi
+        getAvailable() metodi bo'sh taksilar ro'yhatini return qiladi.
+
+   T2-> Joylar va yo'lovchilar:
+        Place klassni manzil sifatida ishlatsak bo'ladi va uning konstruktori tegishli addressni va tuman/mahalla  nomini qabul qiladi.
+
+        toString() metodi addressni return qiladi.
+
+        Taksi kompaniyasi  mijozlari  Passenger klassi tomonidan  tagdim etiladi.
+        Passenger klassi konstructori Place ob'yekti qabul qiladi.
+        (Shu Placce ob'yekti mijozni taksi tomonidan qayerdan olib ketishligini bildiradi) (mijoz turgan joy)
+
+        getPlace() metodi yo'lovchining hozirgi manzilini return qiladi.
+
+   T3-> Taksi boshqaruvi:
+        Taksi boshqaruvchisi mavjut bo'lgan taksilarga mijozlarni tartib bilan ajratib beradi.
+
+        callTaxi() metodi Passager ob'yektini qabul qiladi va ro'yhatda bo'sh bo'lgan taksini return qiladi.
+        Agar bo'sh taksi bo'lmasa chaqiruv bekor qilinadi.
+
+        getLostTrips() medoti bekor qilingan chaqiruvlar sonini return qiladi.
+
+        Taxi klassida sayohatni boshlash va tugatish metodlari berilgan
+        (taksi buyurtma olgan holati va buyurtmani tugatish holati):
+
+        Taksiga yo'lovchi biriktirilganidan keyin u sayohatni  beginTrip(Place dest) metodi orqali boshlashi mumkin.
+        Method yo'lovchini borishi kerak bo'lgan manzilni qabul qiladi.
+
+        Sayohat terminateTrip() metodi orqali tugatiladi va yo'lovchining joyi o'zgaradi.
+        Bundan tashqari taksi  bo'sh taksilar  ro'yhating ohiriga qo'shiladi.
+
+   T4-> Sayohatlar (Trips):
+
+        Trip klassi taksini tugatgan sayohatini tagdim etadi.
+
+        toString() metodi  boshlang'ich va ohirgi manzillarni ',' ajratilgan satr ko'rinishini return qiladi.
+
+        TaxiCompany  klassdagi  getTrips() metodi taksi ni idsini qabul qiladi va shu taksi tugatgan barcha
+        sayohatlarni ro'yhatini return qiladi.
+        Agar tegishli taksi topilmasa InvalidTaxiName istisnosi tashlanish kerak.
+
+   T5-> Statistika:
+        TaxiCompany klassida statistika olish uchun ikkita metod yozilgan:
+
+        statsTaxi() metodi taksi ro'yxatini  return qiladi.
+        Ro'yxat  tugatilgan sayyohat bo'yicha kamayish tartibita tuzilishi kerak.
+        Agar sayyohatlar soni teng bo'lsa ro'yxatda id ni alifbo bo'yicha tartiblang.
+
+        statsDistricts() metodi tuman/mahalla ro'yhatini return qiladi.
+        Bunda yo'lovchi borishi kerak bo'lgan mazilning  tuman/mahalla nomi nazarda tutilgan.
+        Ro'yhat tuman/mahalla  ga borilgan sayyohatlar soni bo'yicha kamayish tartibida tartiblanadi.
+        Agar sayyohatlar soni teng bo'lsa tuman/mahalla moni bo'yicha alifbo tartibida tuzilishi kerak.
+

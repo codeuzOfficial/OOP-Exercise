@@ -1,0 +1,42 @@
+****************     Kutubhona  Library   ****************
+  Kutibhona kitoblarini boshqarish sistemasini tuzing
+
+  T1 -> Kitob malumoti:
+
+      Kitob obyeqti yaratilganda uning muallifi va nomi beriladi.
+      Shu xossalarini getter lar orqali olish mumkin.
+      toString() metodi obyeqtning String  ko'rinishini "muallifi, nomi"  shunday usulda jo'natadi.
+
+  T2 -> Kutubhonaga kitob qo'shish:
+
+      Kutubhona quyidagi tuzilish asosida tashkil etilgan.
+
+      . 3 qavatdan iborat.
+      . Har bir qavatda 30 ta shkaf mavjut. Shkaflar C1 kabi kodlar bilan identifikatsiyalanadi  va ular unique (yogona)
+      . Har bir shkafda 6 ta javon mavjud
+      . Har bir javonda 10 ta kitob mavjud
+
+      Library class da:
+       add() metod berilgan kitobni ma'lum bir pozitsiyaga qo'shish uchun ishlatiladi va
+       contains() metodi pozitsiyada kitob borligini aniqlashtiradi.
+
+  T3 -> Shkafdagi barcha kitobni olish
+              Aniq bir qavat va shkafni nomi berilgan
+              getBooks() metodi shkafni String ko'rinishini return qiladi.
+              String ko'rinishda barcha kitoblarni javon bo'yicha jamlangan String ko'rinishi bo'ladi.
+              masalan:
+              Shelf 1
+              muallifi_1, moni_1
+              muallifi_2, moni_2
+              Shelf 2
+              .
+              .
+              .
+  T4 ->  Kitob  pozitsiyasini olish:
+            Book objecti berilgan  uning pozitsiyasini olish mumkin va shu maqsatda
+              getFloor() (nechanchi qavatda ekanligi),
+              getCloset() (qaysi shkafda ekanligi),
+              getShelf() (nechanchi javonda ekanligi)
+              metodlari berilgan.
+  T5 ->  Kitobni qidirish:
+             Library class da kitobni muallifi va nomi orqali qidirish uchun find() metod berilgan.
